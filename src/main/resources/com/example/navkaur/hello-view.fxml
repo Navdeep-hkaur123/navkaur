@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.navkaur.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <TextField fx:id="OrderID" promptText="OrderID" />
+    <TextField fx:id="customerName" promptText="Customer name" />
+    <TextField fx:id="mobileNumber" promptText="Mobile number" />
+    <TextField fx:id="pizzaSize" promptText="Pizza size (XL, L, M, S)" />
+    <TextField fx:id="numOfToppings" promptText="Number of toppings" />
+    <TextField promptText="Total bill" />
+
+    <Label fx:id="welcomeText" />
+    <Button onAction="#createOrder" text="Create" />
+    <Button mnemonicParsing="false" onAction="#readOrder" text="Read" />
+    <Button mnemonicParsing="false" onAction="#updateOrder" text="Update" />
+    <Button mnemonicParsing="false" onAction="#deleteOrder" text="Delete" />
+    <TableView fx:id="orderTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="OrderID" />
+            <TableColumn fx:id="customerNameColumn" prefWidth="150.0" text="Customer Name" />
+            <TableColumn fx:id="mobileNumberColumn" prefWidth="100.0" text="Mobile Number" />
+            <TableColumn fx:id="pizzaSizeColumn" prefWidth="75.0" text="Pizza Size" />
+            <TableColumn fx:id="numOfToppingsColumn" prefWidth="75.0" text="Number of Toppings" />
+            <TableColumn fx:id="totalBillColumn" prefWidth="100.0" text="Total Bill" />
+        </columns>
+    </TableView>
+</VBox>
